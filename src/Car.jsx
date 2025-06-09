@@ -7,12 +7,14 @@ Source: https://sketchfab.com/3d-models/car-acccd15d4e454399a39dbe40f4f6df71
 Title: Car
 */
 
-import React, { useEffect, useRef } from "react";
-import { useGLTF, useAnimations, Wireframe } from "@react-three/drei";
+import { useAnimations, useGLTF, Wireframe } from "@react-three/drei";
+import { useEffect, useRef } from "react";
 
 export function Model(opts) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/car.glb");
+  const { nodes, materials, animations } = useGLTF(
+    "/demo-2023-shader-wireframes/car.glb"
+  );
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -32,4 +34,3 @@ export function Model(opts) {
     </group>
   );
 }
-useGLTF.preload("/car.glb");
