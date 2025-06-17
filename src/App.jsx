@@ -1,26 +1,25 @@
-import "./styles.css";
-import { Canvas, useThree } from "@react-three/fiber";
 import {
   CameraControls,
   ContactShadows,
-  PerspectiveCamera
+  PerspectiveCamera,
 } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
 import Lights from "./components/Lights";
+import "./styles.css";
 
-import { useControls, Leva } from "leva";
+import { Leva, useControls } from "leva";
 import { Suspense, useEffect, useRef } from "react";
 import { Model } from "./Car";
 import { Primitive } from "./Primitive";
 import { Shader } from "./Shader";
 import { useOptions } from "./useOptions";
-import { Branding } from "./components/Branding";
 
 function Thing() {
   const { Geometry } = useControls({
     Geometry: {
       options: ["gltf", "primitive", "shader"],
-      value: "gltf"
-    }
+      value: "gltf",
+    },
   });
 
   const [{ background, ...opts }, set] = useOptions();
@@ -34,7 +33,7 @@ function Thing() {
         paddingTop: margin,
         paddingLeft: margin,
         paddingBottom: margin,
-        paddingRight: margin
+        paddingRight: margin,
       });
       controls.rotateTo(Math.PI / -4, Math.PI / 2.5, true);
     }
@@ -44,14 +43,14 @@ function Thing() {
         fillMix: 0.25,
         dash: false,
         squeeze: false,
-        thickness: 0.02
+        thickness: 0.02,
       });
     } else {
       set({
         fillMix: 1,
         dash: true,
         squeeze: true,
-        thickness: 0.14
+        thickness: 0.14,
       });
     }
   }, [set, controls, Geometry]);
@@ -88,8 +87,6 @@ export default function App() {
           <Thing />
         </Suspense>
       </Canvas>
-
-      <Branding />
     </>
   );
 }
