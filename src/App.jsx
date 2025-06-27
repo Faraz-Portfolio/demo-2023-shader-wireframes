@@ -75,7 +75,12 @@ function Thing() {
 export default function App() {
   return (
     <>
-      <Leva />
+      <Leva
+        collapsed
+        titleBar={{
+          title: "options",
+        }}
+      />
       <Canvas>
         <CameraControls makeDefault />
         <PerspectiveCamera makeDefault fov={45} />
