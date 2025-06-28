@@ -5,7 +5,6 @@ import {
 } from "@react-three/drei";
 import { Canvas, useThree } from "@react-three/fiber";
 import Lights from "./components/Lights";
-import "./styles.css";
 
 import { Leva, useControls } from "leva";
 import { Suspense, useEffect, useRef } from "react";
