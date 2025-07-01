@@ -1,8 +1,7 @@
-# React + Vite
+# Shader Wireframes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+View Live: https://farazzshaikh.com/demos/demo-2023-shader-wireframes
 
-Currently, two official plugins are available:
+[demo-2023-shader-wireframes.webm](https://github.com/user-attachments/assets/a86c09f5-19cc-4af1-bec5-f45c9a582bcc)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A demo made for the `<Wireframe />` component I had written and contributed to [`@react-three/drei`](https://github.com/pmndrs/drei). 
