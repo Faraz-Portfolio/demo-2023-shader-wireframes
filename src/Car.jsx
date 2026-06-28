@@ -10,11 +10,11 @@ Title: Car
 import { useAnimations, useGLTF, Wireframe } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 export function Model(opts) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF(
-    "/demo-2023-shader-wireframes/car.glb"
-  );
+  const { nodes, materials, animations } = useGLTF(baseUrl + "car.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
